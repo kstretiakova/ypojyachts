@@ -20,7 +20,7 @@ export default defineConfig(({ command }) => {
           assetFileNames: 'assets/[name]-[hash][extname]',
         },
       },
-      outDir: 'dist',
+      outDir: '../dist',
       emptyOutDir: true,
     },
     plugins: [
