@@ -9,23 +9,24 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
-    base: '/',
+    base: command === 'serve' ? '/' : './', // Відносний базовий шлях для продакшн
     build: {
       sourcemap: true,
       rollupOptions: {
-        input: glob.sync('./src/*.html'),
+        input: glob.sync('./src/*.html'), // Всі HTML-файли в корені `src`
         output: {
-          manualChunks: id => id.includes('node_modules') ? 'vendor' : undefined,
+          manualChunks: id =>
+            id.includes('node_modules') ? 'vendor' : undefined,
           entryFileNames: '[name]-[hash].js',
           assetFileNames: 'assets/[name]-[hash][extname]',
         },
       },
-      outDir: '../dist',
+      outDir: '../dist', // Вихідна папка для збірки
       emptyOutDir: true,
     },
     plugins: [
-      injectHTML(),
-      SortCss({ sort: 'mobile-first' }),
+      injectHTML(), // Підключення HTML-партіалів
+      SortCss({ sort: 'mobile-first' }), // Сортування медіа-запитів
     ],
   };
 });
