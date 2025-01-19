@@ -1,0 +1,98 @@
+.yacht-crew-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #001f33, #97bcce);
+  color: #f0f4f8; /* Світліший текст */
+  font-family: 'Arial', sans-serif;
+}
+
+.yacht-crew-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5); /* Темніший фон контейнера */
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.yacht-crew-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff; /* Чисто білий текст */
+}
+
+.yacht-crew-header p {
+  font-size: 18px;
+  color: #d6e4ed; /* Більш світлий сірий */
+  margin-bottom: 20px;
+}
+
+.yacht-crew-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.yacht-form-row {
+  display: flex;
+  gap: 50px;
+}
+
+.yacht-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.yacht-form-group label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #f0f4f8; /* Світлий текст для лейблів */
+}
+
+.yacht-form-group input,
+.yacht-form-group textarea {
+  padding: 12px;
+  border: 1px solid #00d1ff;
+  border-radius: 8px;
+  background: #001f33;
+  color: #ffffff;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.yacht-form-group input::placeholder,
+.yacht-form-group textarea::placeholder {
+  color: #b0c7d9;
+}
+
+.yacht-form-group input:focus,
+.yacht-form-group textarea:focus {
+  border: 2px solid #00d1ff;
+  box-shadow: 0 0 8px #00d1ff;
+  background: #002a42; /* Трохи світліший фон для фокусованого поля */
+}
+
+.yacht-textarea {
+  resize: none;
+  height: 120px;
+}
+
+.yacht-form-submit-button {
+  padding: 15px;
+  background: #00d1ff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #002244;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.yacht-form-submit-button:hover {
+  background: #009fcc;
+  transform: translateY(-2px);
+}
