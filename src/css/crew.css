@@ -1,3 +1,4 @@
+/* Основний стиль для секції Yacht Crew */
 .yacht-crew-section {
   padding: 80px 20px;
   background: linear-gradient(135deg, #001f33, #97bcce);
@@ -95,4 +96,103 @@
 .yacht-form-submit-button:hover {
   background: #009fcc;
   transform: translateY(-2px);
+}
+
+/* Адаптивність для планшетів та мобільних пристроїв */
+
+/* Планшети */
+@media (max-width: 1024px) {
+  .yacht-form-row {
+    flex-direction: column; /* Вертикальне розташування полів на планшетах */
+    gap: 20px;
+  }
+
+  .yacht-form-group {
+    gap: 12px;
+  }
+
+  .yacht-form-submit-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .yacht-crew-container {
+    padding: 30px;
+  }
+
+  .yacht-crew-header h2 {
+    font-size: 28px;
+  }
+
+  .yacht-crew-header p {
+    font-size: 16px;
+  }
+}
+
+/* Мобільні пристрої */
+@media (max-width: 768px) {
+  .yacht-form-row {
+    flex-direction: column; /* Поля форми викладені стовпчиком на мобільних */
+    gap: 20px;
+  }
+
+  .yacht-crew-container {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .yacht-form-submit-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .yacht-crew-header h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .yacht-crew-header p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .yacht-form-group input,
+  .yacht-form-group textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .yacht-textarea {
+    height: 100px; /* Менша висота текстового поля */
+  }
+}
+
+/* Дуже малі екрани */
+@media (max-width: 480px) {
+  .yacht-crew-container {
+    padding: 15px;
+  }
+
+  .yacht-form-submit-button {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .yacht-crew-header h2 {
+    font-size: 22px;
+  }
+
+  .yacht-crew-header p {
+    font-size: 12px;
+  }
+
+  .yacht-form-group input,
+  .yacht-form-group textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .yacht-textarea {
+    height: 80px; /* Ще менша висота текстового поля */
+  }
 }

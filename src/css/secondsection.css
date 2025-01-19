@@ -31,7 +31,7 @@ h2 {
 
 /* Search Bar */
 .search-bar {
-width: 1200px;
+  width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -174,4 +174,52 @@ width: 1200px;
 .apply-btn:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(86, 204, 242, 0.5);
+}
+
+/* Адаптивність для мобільних та планшетних пристроїв */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 100%; /* Встановлюємо ширину на 100%, щоб вміст заповнював всю доступну ширину */
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    box-sizing: border-box; /* Додаємо для врахування відступів в ширину */
+  }
+
+  .search-bar input[type="text"],
+  .search-bar button {
+    width: 100%; /* Встановлюємо ширину 100% для полів введення та кнопок */
+  }
+
+  .filters {
+    flex-direction: column; /* Переводимо фільтри в колонку для мобільних */
+    gap: 10px;
+  }
+
+  .job h3 {
+    font-size: 18px; /* Зменшуємо розмір заголовків у списку вакансій */
+  }
+
+  .job p {
+    font-size: 12px; /* Зменшуємо розмір тексту вакансій */
+  }
+
+  .apply-btn {
+    font-size: 14px; /* Зменшуємо розмір шрифта кнопки для мобільних */
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 24px; /* Зменшуємо розмір шрифта заголовку */
+  }
+
+  .search-bar {
+    padding: 10px;
+  }
+
+  .apply-btn {
+    padding: 8px 20px;
+  }
 }

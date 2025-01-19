@@ -75,11 +75,6 @@
 .button-group {
   display: flex;
   gap: 20px;
-}
-
-.button-group {
-  display: flex;
-  gap: 20px;
   justify-content: center;
   margin-top: 20px;
 }
@@ -97,7 +92,7 @@
   text-decoration: none;
   border: none;
   border-radius: 30px;
-  white-space: nowrap; /* Забороняє перенос тексту */
+  white-space: nowrap;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
@@ -111,4 +106,54 @@
 .hero-button:active {
   transform: translateY(0);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивність для мобільних пристроїв (менше ніж 768px) */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto; /* Зменшуємо висоту секції */
+    padding: 50px 0; /* Додаємо відступи для кращого вигляду */
+  }
+
+  .hero-content {
+    gap: 15px; /* Зменшуємо відстань між елементами */
+    padding: 0 20px; /* Додаємо відступи по боках */
+  }
+
+  .hero-section h1 {
+    font-size: 36px; /* Зменшуємо шрифт заголовку */
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+  .hero-section p {
+    font-size: 18px; /* Зменшуємо шрифт опису */
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+
+  .button-group {
+    flex-direction: column; /* Вертикальне розташування кнопок */
+    gap: 15px; /* Відстань між кнопками */
+  }
+
+  .hero-button {
+    font-size: 16px; /* Зменшуємо розмір шрифту на кнопках */
+    padding: 10px 30px; /* Зменшуємо розмір кнопок */
+  }
+}
+
+/* Адаптивність для планшетів (між 768px і 1280px) */
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero-section h1 {
+    font-size: 48px; /* Шрифт заголовку для середніх екранів */
+  }
+
+  .hero-section p {
+    font-size: 20px; /* Шрифт опису для середніх екранів */
+  }
+
+  .hero-button {
+    font-size: 17px; /* Трохи більший шрифт на планшетах */
+  }
 }

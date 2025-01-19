@@ -134,23 +134,97 @@
   background-color: #d35400;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .footer .container {
-    flex-direction: column;
+    flex-direction: column; /* Колонки вирівнюються вертикально */
     align-items: center;
+    gap: 20px;
   }
 
   .footer .column {
-    margin-bottom: 25px;
+    margin-bottom: 20px; /* Додаємо відступи між колонками */
+    text-align: center; /* Вирівнюємо текст по центру */
+  }
+
+  .footer h4 {
+    font-size: 20px; /* Зменшуємо заголовки */
   }
 
   .footer ul {
-    flex-direction: column;
-    gap: 12px;
+    gap: 10px; /* Зменшуємо відстань між іконками */
+  }
+
+  .footer ul li a {
+    font-size: 14px; /* Зменшуємо розмір шрифта посилань */
   }
 
   .footer .subscribe {
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: column; /* Форма підписки переходить у вертикальний вигляд */
+    gap: 15px;
+  }
+
+  .footer .subscribe input {
+    width: 100%; /* Інпут розтягується на всю ширину */
+  }
+
+  .footer .subscribe button {
+    width: 100%; /* Кнопка розтягується на всю ширину */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 15px; /* Зменшуємо загальні відступи футера */
+  }
+
+  .footer h4 {
+    font-size: 18px; /* Ще зменшуємо заголовки */
+    margin-bottom: 15px; /* Зменшуємо відстань під заголовком */
+  }
+
+  .footer p {
+    font-size: 14px; /* Зменшуємо розмір тексту */
+    line-height: 1.6;
+  }
+
+  .footer ul {
+    flex-direction: column; /* Іконки розташовуються вертикально */
+    gap: 12px; /* Відстань між іконками */
+  }
+
+  .footer .social-link {
+    width: 40px; /* Менші іконки */
+    height: 40px;
+  }
+
+  .footer .subscribe input {
+    padding: 10px; /* Менший паддінг для інпуту */
+    font-size: 14px; /* Зменшуємо розмір шрифта інпуту */
+  }
+
+  .footer .subscribe button {
+    padding: 10px; /* Зменшуємо розмір кнопки */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 10px; /* Ще менше відступів */
+  }
+
+  .footer h4 {
+    font-size: 16px; /* Компактні заголовки */
+    margin-bottom: 10px;
+  }
+
+  .footer .container {
+    gap: 10px; /* Зменшуємо відстань між елементами */
+  }
+
+  .footer .subscribe input,
+  .footer .subscribe button {
+    padding: 8px; /* Мінімальний паддінг для інпуту та кнопки */
+    font-size: 12px; /* Дуже компактний текст */
   }
 }

@@ -92,6 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const applyButton = jobDiv.querySelector(".apply-btn");
             applyButton.addEventListener("click", (event) => {
                 event.preventDefault();  // Prevent default anchor behavior
+
+                // Set the selected job title in the form
+                const jobPositionInput = document.getElementById("jobPosition");
+                jobPositionInput.value = job.title; // Set the job title in the form field
+
+                // Scroll to the apply section
                 const contactsSection = document.getElementById("contacts");
                 contactsSection.scrollIntoView({
                     behavior: 'smooth'
