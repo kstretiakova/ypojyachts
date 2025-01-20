@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
-    base: command === 'serve' ? '/' : './', // Відносний базовий шлях для продакшн
+    base:  '/',
     build: {
       sourcemap: true,
       rollupOptions: {
