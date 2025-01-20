@@ -9,24 +9,32 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
-    base: '/',
+    base: '/ypojyachts/',  // Matches your build script
     build: {
       sourcemap: true,
       rollupOptions: {
-        input: glob.sync('./src/*.html'), // Всі HTML-файли в корені `src`
+        input: glob.sync('./src/*.html'),
         output: {
-          manualChunks: id =>
-            id.includes('node_modules') ? 'vendor' : undefined,
-          entryFileNames: 'assets/[name]-[hash].js',
-          assetFileNames: 'assets/[name]-[hash][extname]',
+          manualChunks: id => id.includes('node_modules') ? 'vendor' : undefined,
+          entryFileNames: 'assets/js/[name]-[hash].js',
+          assetFileNames: ({ name }) => {
+            if (/\.(css)$/.test(name ?? '')) {
+              return 'assets/css/[name]-[hash][extname]';
+            }
+            if (/\.(ttf|woff|woff2|eot)$/.test(name ?? '')) {
+              return 'assets/fonts/[name]-[hash][extname]';
+            }
+            return 'assets/[name]-[hash][extname]';
+          },
+          chunkFileNames: 'assets/js/[name]-[hash].js',
         },
       },
-      outDir: '../dist', // Вихідна папка для збірки
+      outDir: '../dist',
       emptyOutDir: true,
     },
     plugins: [
-      injectHTML(), // Підключення HTML-партіалів
-      SortCss({ sort: 'mobile-first' }), // Сортування медіа-запитів
+      injectHTML(),
+      SortCss({ sort: 'mobile-first' }),
     ],
   };
 });
