@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
-    base:  '/',
+    base: '/',
     build: {
       sourcemap: true,
       rollupOptions: {
@@ -21,7 +21,7 @@ export default defineConfig(({ command }) => {
           assetFileNames: 'assets/[name]-[hash][extname]',
         },
       },
-      outDir: 'dist', // Вихідна папка для збірки
+      outDir: '../dist', // Вихідна папка для збірки
       emptyOutDir: true,
     },
     plugins: [
