@@ -17,7 +17,7 @@ export default defineConfig(({ command }) => {
         output: {
           manualChunks: id =>
             id.includes('node_modules') ? 'vendor' : undefined,
-          entryFileNames: '[name]-[hash].js',
+          entryFileNames: 'assets/[name]-[hash].js',
           assetFileNames: 'assets/[name]-[hash][extname]',
         },
       },
