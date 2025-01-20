@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
-    base: '/ypojyachts/',  // Matches your build script
+    base: '/',  // Changed from '/ypojyachts/' to '/'
     build: {
       sourcemap: true,
       rollupOptions: {
