@@ -21,7 +21,7 @@ export default defineConfig(({ command }) => {
           assetFileNames: 'assets/[name]-[hash][extname]',
         },
       },
-      outDir: '../dist', // Вихідна папка для збірки
+      outDir: 'dist', // Вихідна папка для збірки
       emptyOutDir: true,
     },
     plugins: [
