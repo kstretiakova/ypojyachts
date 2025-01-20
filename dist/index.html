@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/ypojyachts/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YPOJ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;300;400;500&display=swap"
+    rel="stylesheet" />
+  <script type="module" crossorigin src="/ypojyachts/assets/js/index-yZ-9aUB5.js"></script>
+  <link rel="stylesheet" crossorigin href="/ypojyachts/assets/css/index-Cdnpqbw_.css">
+</head>
+
+<body>
+  <header class="header">
+  <div class="container">
+    <a class="header-logo" href="/src/index.html">YPOJ</a>
+    <nav>
+      <a class="menu-name" href="#about">About Us</a>
+      <a class="menu-name" href="#jobs">Jobs</a>
+      <a class="menu-name" href="#contacts">Contacts</a>
+      <a href="#jobs" class="apply-button-header">Apply Now</a> <!-- Змінено кнопку на посилання -->
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <!-- Loads the specified .html file -->
+    <section id="about" class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Your vision - our mission</h1>
+      <p>We connect the best clients with top candidates for luxury yachts, households, and hotels.</p>
+      <div class="button-group">
+        <a href="#jobs" class="hero-button">Find a Job</a>
+        <a href="#crew" class="hero-button">Find a Crew</a>
+      </div>
+    </div>
+  </div>
+</section>
+    <section id="jobs" class="jobs-section">
+    <div class="container">
+        <div class="content-wrapper">
+            <h2>Job Listings</h2>
+
+            <div class="search-bar">
+                <input type="text" id="keyword" placeholder="Job Title, Phrase or Keyword">
+                <button onclick="filterJobs()">Search</button>
+            </div>
+
+            <div class="filters">
+                <select id="jobType">
+                    <option value="">Job Type</option>
+                    <option value="Temporary">Temporary</option>
+                    <option value="Day Work">Day Work</option>
+                    <option value="Seasonal">Seasonal</option>
+                    <option value="Permanent">Permanent</option>
+                    <option value="Shoreside">Shoreside</option>
+                </select>
+                <select id="yachtType">
+                    <option value="">Yacht Type</option>
+                    <option value="Motor">Motor</option>
+                    <option value="Sailing">Sailing</option>
+                </select>
+                <select id="department">
+                    <option value="">Position</option>
+                    <option value="Galley">Galley</option>
+                    <option value="Interior">Interior</option>
+                    <option value="Deck">Deck</option>
+                    <option value="Engineering">Engineering</option>
+                </select>
+                <select id="vesselSize">
+                    <option value="">Vessel Sizes</option>
+                    <option value="0-30m">0-30m</option>
+                    <option value="31m-50m">31m-50m</option>
+                    <option value="51m-80m">51m-80m</option>
+                    <option value="81m-100m">81m-100m</option>
+                    <option value="101m+">101m+</option>
+                </select>
+            </div>
+
+            <div class="jobs" id="jobList">
+                <!-- Jobs will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="apply" class="apply-section">
+  <div class="content-wrapper-apply-split">
+    <!-- Зображення -->
+    <div class="apply-video">
+      <img src="/ypojyachts/assets/applyf-BRhoKP8u.JPG" alt="Apply Background Image">
+    </div>
+
+    <!-- Форма -->
+    <div class="apply-form-wrapper">
+      <h2>Apply for a Position</h2>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- Прихований input для access_key -->
+        <input type="hidden" name="access_key" value="206d00ed-14ca-42c6-9087-e0178767f7bf">
+
+        <!-- Поля форми -->
+        <div class="form-group">
+          <label for="jobPosition">Job Name Position</label>
+          <input type="text" id="jobPosition" name="jobPosition" placeholder="Selected position will appear here" readonly>
+        </div>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Прихований input для перенаправлення після успіху -->
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+        <button type="submit" class="apply-button">Apply</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+    <section id="crew" class="yacht-crew-section">
+  <div class="yacht-crew-container">
+    <header class="yacht-crew-header">
+      <h2>Request Your Yacht Crew Member</h2>
+      <p>Fill in the details below, and we'll help you find the perfect candidate.</p>
+    </header>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <!-- Додаємо прихований input для access_key -->
+      <input type="hidden" name="access_key" value="025d4bf0-ce58-45d3-900e-47a35f149be5">
+
+      <!-- Поля вашої форми -->
+      <div class="yacht-form-row">
+        <div class="yacht-form-group">
+          <label for="position">Position</label>
+          <input type="text" id="position" name="position" placeholder="E.g., Chef, Deckhand" required>
+        </div>
+        <div class="yacht-form-group">
+          <label for="yacht-type">Yacht Type & Size</label>
+          <input type="text" id="yacht-type" name="yachtType" placeholder="E.g., 50m Motor Yacht" required>
+        </div>
+      </div>
+      <div class="yacht-form-row">
+        <div class="yacht-form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="firstName" placeholder="E.g., John" required>
+        </div>
+        <div class="yacht-form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="lastName" placeholder="E.g., Doe" required>
+        </div>
+      </div>
+      <div class="yacht-form-row">
+        <div class="yacht-form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="E.g., john.doe@example.com" required>
+        </div>
+        <div class="yacht-form-group">
+          <label for="contact">Contact (WhatsApp)</label>
+          <input type="text" id="contact" name="contact" placeholder="E.g., +123456789">
+        </div>
+      </div>
+      <div class="yacht-form-group">
+        <label for="details">Additional Details</label>
+        <textarea id="details" name="details" class="yacht-textarea" placeholder="Provide details about the role..."></textarea>
+      </div>
+
+      <!-- Додаємо прихований input для перенаправлення після успіху -->
+      <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+      <button type="submit" class="yacht-form-submit-button">Submit Request</button>
+    </form>
+
+  </div>
+</section>
+  </main>
+
+  <footer id="contacts" class="footer">
+  <div class="container">
+    <div class="column">
+      <h4>Follow Us</h4>
+      <p>Stay updated with our latest news and updates.</p>
+      <ul class="social">
+        <li><a href="https://www.linkedin.com/company/105715938" class="social-link">
+          <svg class="social-icon">
+            <use href="/ypojyachts/assets/icons-Fj9nmaB_.svg#icon-linkedin"></use>
+          </svg>
+        </a></li>
+        <li><a href="https://www.instagram.com/yacht_job/" class="social-link">
+          <svg class="social-icon">
+            <use href="/ypojyachts/assets/icons-Fj9nmaB_.svg#icon-instagram"></use>
+          </svg>
+        </a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h4>Quick Links</h4>
+      <ul class="quick-links">
+        <li><a href="/src/index.html">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#jobs">Jobs</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h4>Contact Us</h4>
+      <p>If you have any questions, feel free to reach out to us!</p>
+      <p><a href="mailto:contact@ypojrecruitment.com" class="contact-link">contact@ypojrecruitment.com</a></p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+
+</html>
