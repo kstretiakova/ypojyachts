@@ -13,7 +13,6 @@
 
 .content-wrapper-apply-split {
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
@@ -22,17 +21,18 @@
 .apply-video {
   flex: 0 1 40%;
   max-width: 40%;
-  height: auto;
-  min-height: 300px; /* Мінімальна висота */
   overflow: hidden;
   border-radius: 10px 0 0 10px;
   position: relative;
+  display: flex; /* Центрує зображення */
+  justify-content: center;
+  align-items: center;
 }
 
 .apply-video img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; /* Розтягує по ширині контейнера */
+  height: 100%; /* Розтягує по висоті контейнера */
+  object-fit: cover; /* Забезпечує правильне масштабування без спотворень */
   border-radius: 10px 0 0 10px;
 }
 
@@ -98,9 +98,7 @@ textarea:focus,
 }
 
 textarea {
-  resize: none; /* Заборона зміни розміру користувачем */
-  max-height: 200px; /* Максимальна висота */
-  overflow-y: auto; /* Дозвіл прокручування вертикально */
+  resize: vertical;
 }
 
 .apply-button {
@@ -137,7 +135,7 @@ textarea {
   .apply-video {
     flex: none;
     width: 100%;
-    min-height: 300px;
+    height: 300px;
   }
 
   .apply-form-wrapper {
@@ -171,6 +169,8 @@ textarea {
   .apply-button {
     padding: 10px;
     font-size: 13px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .apply-button {
@@ -182,6 +182,7 @@ textarea {
   .apply-form-wrapper {
     padding: 15px;
     width: calc(100% - 30px);
+    box-sizing: border-box;
   }
 
   input[type="text"],
@@ -190,6 +191,8 @@ textarea {
   .apply-button {
     padding: 8px;
     font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .apply-button {
