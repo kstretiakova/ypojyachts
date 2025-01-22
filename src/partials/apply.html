@@ -29,12 +29,20 @@
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Enter your email" required>
         </div>
-
-        <!-- Прихований input для перенаправлення після успіху -->
-        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+        <div class="form-group">
+          <label for="contact">Contact (WhatsApp)</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your WhatsApp number" required>
+        </div>
+        <div class="form-group">
+          <label for="experience">Professional Experience</label>
+          <textarea id="experience" name="experience" placeholder="Share a short summary of your work experience. Include your main roles and responsibilities related to the position." rows="5" required></textarea>
+        </div>
 
         <button type="submit" class="apply-button">Apply</button>
       </form>
+
+      <!-- Текст під формою -->
+      <p class="apply-note">We will contact you ASAP if your experience is the best match for this position to request your CV, cover letter, and other documents.</p>
     </div>
   </div>
 </section>

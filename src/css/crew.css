@@ -195,4 +195,13 @@
   .yacht-textarea {
     height: 80px; /* Ще менша висота текстового поля */
   }
+
+  .form-note {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #f0f4f8; /* Світлий текст для читабельності */
+    text-align: center; /* Центрування тексту */
+    font-style: italic; /* Додає нахилений стиль для акценту */
+  }
+
 }
