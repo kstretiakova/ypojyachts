@@ -11,8 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;300;400;500&display=swap"
     rel="stylesheet" />
-  <script type="module" crossorigin src="/assets/js/index-Cuh1vN0r.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/css/index-BK_KgW7o.css">
+  <script type="module" crossorigin src="/assets/js/index-DnVc6cud.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/css/index-at0t9DFp.css">
 </head>
 
 <body>
@@ -95,7 +95,7 @@
   <div class="content-wrapper-apply-split">
     <!-- Зображення -->
     <div class="apply-video">
-      <img src="/assets/applyf-BRhoKP8u.JPG" alt="Apply Background Image">
+      <img src="/assets/applyf-Cv58q-l5.JPG" alt="Apply Background Image">
     </div>
 
     <!-- Форма -->
@@ -122,12 +122,20 @@
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Enter your email" required>
         </div>
-
-        <!-- Прихований input для перенаправлення після успіху -->
-        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+        <div class="form-group">
+          <label for="contact">Contact (WhatsApp)</label>
+          <input type="text" id="contact" name="contact" placeholder="Enter your WhatsApp number" required>
+        </div>
+        <div class="form-group">
+          <label for="experience">Professional Experience</label>
+          <textarea id="experience" name="experience" placeholder="Share a short summary of your work experience. Include your main roles and responsibilities related to the position." rows="5" required></textarea>
+        </div>
 
         <button type="submit" class="apply-button">Apply</button>
       </form>
+
+      <!-- Текст під формою -->
+      <p class="apply-note">We will contact you ASAP if your experience is the best match for this position to request your CV, cover letter, and other documents.</p>
     </div>
   </div>
 </section>
@@ -182,7 +190,11 @@
       <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
       <button type="submit" class="yacht-form-submit-button">Submit Request</button>
+
+      <!-- Додаємо текст під кнопкою -->
+      <p class="form-note">We will contact you ASAP once we receive your request.</p>
     </form>
+
 
   </div>
 </section>
@@ -209,7 +221,6 @@
     <div class="column">
       <h4>Quick Links</h4>
       <ul class="quick-links">
-        <li><a href="/src/index.html">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#jobs">Jobs</a></li>
       </ul>
