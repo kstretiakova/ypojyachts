@@ -64,4 +64,4 @@
           to { opacity: 1; }
       }
   `,document.head.appendChild(o),document.getElementById("closeCrewModalButton").addEventListener("click",function(){document.body.removeChild(r)})}function D(r){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r)}
-//# sourceMappingURL=index-CUZGITUe.js.map
+//# sourceMappingURL=index-ttnl5iId.js.map
