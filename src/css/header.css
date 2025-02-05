@@ -115,7 +115,7 @@ nav {
   width: 30px;
   height: 25px;
   cursor: pointer;
-  z-index: 1100; /* щоб був зверху на мобільних */
+  z-index: 1100;
 }
 
 .bar {
@@ -125,24 +125,30 @@ nav {
   border-radius: 10px;
 }
 
-/* Показати бургер-меню на мобільних пристроях */
+/* Покращене випливаюче меню */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Сховати меню */
+    display: none;
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     flex-direction: column;
     align-items: center;
     gap: 15px;
     padding: 20px;
     z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
   }
 
   .nav-links.open {
-    display: flex; /* Показати меню при активності */
+    display: flex;
+    transform: translateY(0);
   }
 
   .burger-menu {
@@ -150,7 +156,12 @@ nav {
   }
 
   .menu-name {
-    font-size: 18px; /* Трохи більший шрифт для мобільного */
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+
+  .menu-name:hover {
+    color: #0056b3;
   }
 }
 
@@ -165,70 +176,27 @@ nav {
   nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Менший відступ між пунктами меню */
+    gap: 10px;
     justify-content: center;
     align-items: center;
   }
 
   .menu-name {
-    font-size: 14px; /* Зменшення шрифту пунктів меню */
-    padding: 5px 10px; /* Менший паддинг */
+    font-size: 14px;
+    padding: 5px 10px;
   }
 
   .header-logo {
-    font-size: 20px; /* Зменшення логотипу */
+    font-size: 20px;
   }
 
   .apply-button-header {
-    font-size: 12px; /* Зменшення шрифту кнопки */
-    padding: 8px 15px; /* Менший розмір кнопки */
-    border-radius: 20px; /* Більш компактний вигляд */
+    font-size: 12px;
+    padding: 8px 15px;
+    border-radius: 20px;
   }
 
   .header {
-    padding: 10px 0; /* Зменшення відступу для мобільних */
-  }
-}
-
-/* Адаптивність для планшетів */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .menu-name {
-    font-size: 15px;
-  }
-
-  .apply-button-header {
-    font-size: 13px;
-    padding: 10px 18px;
-  }
-}
-
-/* Додаткові стилі для покращення вигляду на мобільних */
-@media (max-width: 480px) {
-  .container {
-    gap: 10px;
-  }
-
-  nav {
-    gap: 8px;
-  }
-
-  .menu-name {
-    font-size: 12px;
-    padding: 5px;
-  }
-
-  .apply-button-header {
-    font-size: 12px;
-    padding: 6px 12px;
-    border-radius: 15px;
-  }
-
-  .header-logo {
-    font-size: 18px;
+    padding: 10px 0;
   }
 }
