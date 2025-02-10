@@ -1,3 +1,4 @@
+/* Основні стилі для десктопу */
 .header {
   background: rgba(255, 255, 255, 0.9);
   top: 0;
@@ -8,16 +9,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
   position: fixed;
-}
-
-.header-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-  z-index: -1;
 }
 
 .container {
@@ -42,14 +33,12 @@
   transition: color 0.3s ease;
 }
 
-.header-logo:hover {
-  color: #007bff;
-}
-
+/* Розміщення меню праворуч */
 nav {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   align-items: center;
+  margin-left: auto;
 }
 
 .menu-name {
@@ -58,13 +47,13 @@ nav {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
-  transition: color 0.3s ease, transform 0.3s ease;
   position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
 }
 
 .menu-name:hover {
   color: #007bff;
-  transform: translateY(-2px);
 }
 
 .menu-name::after {
@@ -75,7 +64,7 @@ nav {
   background: #007bff;
   transition: width 0.3s;
   position: absolute;
-  bottom: -4px;
+  bottom: 0;
   left: 0;
 }
 
@@ -83,136 +72,102 @@ nav {
   width: 100%;
 }
 
-.apply-button-header {
-  display: inline-block;
-  padding: 10px 20px;
-  background: linear-gradient(90deg, #007bff, #0056b3);
-  color: #fff;
-  border: none;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.apply-button-header:hover {
-  background: linear-gradient(90deg, #0056b3, #003f7f);
-  transform: scale(1.05);
-}
-
-/* Основні стилі для бургер-меню */
-.burger-menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-  z-index: 1100;
-}
-
-.bar {
-  width: 100%;
-  height: 4px;
-  background-color: #333;
-  border-radius: 10px;
-}
-
-/* Покращене випливаюче меню */
+/* Новий стиль для мобільного меню */
 @media (max-width: 768px) {
-  .nav-links {
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1100;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .bar {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #3c5875, #719dcc);
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  /* Бургер-меню перетворюється на кнопку закриття */
+  .burger-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+    background: #4df0ff;
+  }
+
+  .burger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+    background: #4df0ff;
+  }
+
+  nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(230, 230, 250, 0.9));
-    padding-top: 80px;
-    gap: 20px;
+    background: radial-gradient(circle at top, rgba(50, 50, 150, 0.95), rgba(20, 20, 60, 0.9));
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    padding-top: 100px;
+    gap: 25px;
     z-index: 1000;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(25px); /* Більше розмиття */
-    transition: transform 0.3s ease-in-out;
-    transform: translateY(-100%);
-    border-radius: 0 0 20px 20px; /* Закруглені краї */
+    transform: scale(0.8) translateY(-100%);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
   }
 
-  .nav-links.open {
-    transform: translateY(0);
+  nav.open {
+    transform: scale(1) translateY(0);
+    opacity: 1;
   }
 
   .nav-links a {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.5s ease-in-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  .nav-links a:hover::before {
+    transform: translate(-50%, -50%) scale(1);
   }
 
   .nav-links a:hover {
-    background: rgba(0, 123, 255, 0.2);
-    color: #007bff;
-  }
-}
-
-
-  .burger-menu {
-    display: flex;
-  }
-
-  .menu-name {
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-
-  .menu-name:hover {
-    color: #0056b3;
-  }
-
-
-/* Адаптивність для мобільних пристроїв */
-@media (max-width: 768px) {
-  .container {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 15px;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .menu-name {
-    font-size: 14px;
-    padding: 5px 10px;
-  }
-
-  .header-logo {
-    font-size: 20px;
-  }
-
-  .apply-button-header {
-    font-size: 12px;
-    padding: 8px 15px;
-    border-radius: 20px;
-  }
-
-  .header {
-    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.3);
   }
 }

@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
           description: "Create gourmet meals for guests and crew, handle menu planning and provisioning, and maintain high culinary standards.",
           location: "81m Motor Yacht",
           salary: "DOE but competitive",
-          startDate: "March"
+          startDate: "April"
       }
   ];
 
