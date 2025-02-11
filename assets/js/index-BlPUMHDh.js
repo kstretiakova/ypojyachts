@@ -64,4 +64,4 @@
           to { opacity: 1; }
       }
   `,document.head.appendChild(r),document.getElementById("closeCrewModalButton").addEventListener("click",function(){document.body.removeChild(o)})}function x(o){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(o)}
-//# sourceMappingURL=index-DW2T5-Vj.js.map
+//# sourceMappingURL=index-BlPUMHDh.js.map
