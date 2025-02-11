@@ -26,8 +26,8 @@
   margin-bottom: 20px;
   font-size: 22px;
   text-transform: uppercase;
-  color: #f39c12;
-  border-bottom: 2px solid #f39c12;
+  color: #009fcc;
+  border-bottom: 2px solid #009fcc;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -58,7 +58,7 @@
 }
 
 .footer ul li a:hover {
-  color: #f39c12;
+  color: #009fcc;
 }
 
 .footer .social-link {
@@ -74,7 +74,7 @@
 }
 
 .footer .social-link:hover {
-  background-color: #f39c12;
+  background-color: #009fcc;
   transform: scale(1.15);
 }
 
@@ -85,7 +85,7 @@
 }
 
 .footer .contact-link {
-  color: #f39c12;
+  color: #009fcc;
   font-size: 16px;
   text-decoration: none;
   font-weight: bold;
@@ -105,7 +105,7 @@
 
 .footer .subscribe input {
   padding: 12px;
-  border: 1px solid #f39c12;
+  border: 1px solid #009fcc;
   border-radius: 4px;
   width: 220px;
   outline: none;
@@ -120,7 +120,7 @@
 
 .footer .subscribe button {
   padding: 12px 25px;
-  background-color: #f39c12;
+  background-color: #009fcc;
   color: #1e1e2f;
   border: none;
   border-radius: 4px;
@@ -131,7 +131,7 @@
 }
 
 .footer .subscribe button:hover {
-  background-color: #d35400;
+  background-color: #0291b9;
 }
 
 @media (max-width: 1024px) {

@@ -64,7 +64,7 @@ h2 {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(90deg, #11a7f2, #0ec1a9);
+  background: linear-gradient(90deg, #34aabf, #2265a3);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -73,7 +73,7 @@ h2 {
 }
 
 .search-bar button:hover {
-  background: linear-gradient(90deg, #feb47b, #ff7e5f);
+  background: linear-gradient(90deg, #08478b, #719dcc);
   transform: translateY(-3px);
 }
 

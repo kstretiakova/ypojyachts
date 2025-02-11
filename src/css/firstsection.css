@@ -92,7 +92,7 @@
   justify-content: center;
   align-items: center;
   padding: 12px 40px;
-  background: linear-gradient(90deg, #0066ff, #0044cc);
+  background: linear-gradient(90deg, #34aabf, #2265a3);
   color: #fff;
   font-size: 18px;
   font-weight: 600;
@@ -106,7 +106,7 @@
 }
 
 .hero-button:hover {
-  background: linear-gradient(90deg, #0044cc, #002a99);
+  background: linear-gradient(90deg, #08478b, #719dcc);
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
