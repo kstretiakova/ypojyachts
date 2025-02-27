@@ -30,10 +30,10 @@
 }
 
 .apply-video img {
-  width: 100%; /* Розтягує по ширині контейнера */
+  width: 100%; 
   height: 100%; /* Розтягує по висоті контейнера */
   object-fit: cover; /* Забезпечує правильне масштабування без спотворень */
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 11px;
 }
 
 .apply-form-wrapper {
